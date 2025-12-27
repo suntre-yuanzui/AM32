@@ -1887,30 +1887,41 @@ if(zero_crosses < 5){
         }
         if (signaltimeout > (LOOP_FREQUENCY_HZ >> 1)) { // half second timeout when armed;
             if (armed) {
+                // 信号丢失时停止电机，但保持armed状态，等待信号恢复
                 allOff();
-                armed = 0;
+                maskPhaseInterrupts();
                 input = 0;
-                inputSet = 0;
-                zero_input_count = 0;
+                running = 0;
                 SET_DUTY_CYCLE_ALL(0);
-                resetInputCaptureTimer();
-                for (int i = 0; i < 64; i++) {
-                    dma_buffer[i] = 0;
+                
+                // 重置电机启动相关标志位，为信号恢复后重启做准备
+                old_routine = 1;
+                zero_crosses = 0;
+                commutation_interval = 12500;
+                average_interval = 5000;
+                last_average_interval = average_interval;
+                bemf_timeout_happened = 0;
+                desync_happened = 0;
+                if (eepromBuffer.use_sine_start) {
+                    stepper_sine = 1;
                 }
-                NVIC_SystemReset();
-            }
-            if (signaltimeout > LOOP_FREQUENCY_HZ << 1) { // 2 second when not armed
-                allOff();
-                armed = 0;
-                input = 0;
-                inputSet = 0;
-                zero_input_count = 0;
-                SET_DUTY_CYCLE_ALL(0);
-                resetInputCaptureTimer();
-                for (int i = 0; i < 64; i++) {
-                    dma_buffer[i] = 0;
+                
+                // 保持armed=1，不复位，允许信号恢复后直接重新启动
+                // 飞行中不允许复位电调，只等待信号恢复
+            } else {
+                // 未解锁状态，2秒后复位
+                if (signaltimeout > LOOP_FREQUENCY_HZ << 1) { // 2 second when not armed
+                    allOff();
+                    input = 0;
+                    inputSet = 0;
+                    zero_input_count = 0;
+                    SET_DUTY_CYCLE_ALL(0);
+                    resetInputCaptureTimer();
+                    for (int i = 0; i < 64; i++) {
+                        dma_buffer[i] = 0;
+                    }
+                    NVIC_SystemReset();
                 }
-                NVIC_SystemReset();
             }
         }
 #ifdef USE_CUSTOM_LED
