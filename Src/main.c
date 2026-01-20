@@ -331,10 +331,10 @@ char do_once_sinemode = 0;
 uint8_t auto_advance_level;
 
 //============================= Servo Settings ==============================
-uint16_t servo_low_threshold = 1100; // anything below this point considered 0
+uint16_t servo_low_threshold = 1110; // anything below this point considered 0
 uint16_t servo_high_threshold = 1900; // anything above this point considered 2000 (max)
-uint16_t servo_neutral = 1500;
-uint8_t servo_dead_band = 100;
+uint16_t servo_neutral = 1505;
+uint8_t servo_dead_band = 50;
 
 //========================= Battery Cuttoff Settings ========================
 char LOW_VOLTAGE_CUTOFF = 0; // Turn Low Voltage CUTOFF on or off
@@ -605,6 +605,11 @@ void loadEEpromSettings()
       eepromBuffer.reserved_eeprom_3[1] = 0;
       eepromBuffer.reserved_eeprom_3[2] = 0;
       eepromBuffer.reserved_eeprom_3[3] = 0;
+      // servo settings: low_threshold=(1110-750)/2=180, neutral=1505-1374=131, dead_band=50
+      eepromBuffer.servo.low_threshold = 180;
+      eepromBuffer.servo.high_threshold = 75;  // (1900-1750)/2=75
+      eepromBuffer.servo.neutral = 131;
+      eepromBuffer.servo.dead_band = 50;
     }
     // eepromBuffer.advance_level can either be set to 0-3 with config tools less than 1.90 or 10-42 with 1.90 or above 
     if (eepromBuffer.advance_level > 42 || (eepromBuffer.advance_level < 10 && eepromBuffer.advance_level > 3)){
