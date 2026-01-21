@@ -1,0 +1,147 @@
+T185C 007:884.477   SEGGER J-Link V8.90 Log File
+T185C 007:884.505   DLL Compiled: Nov 26 2025 17:20:53
+T185C 007:884.509   Logging started @ 2026-01-20 09:34
+T185C 007:884.511   Process: C:\Keil_v5\UV4\UV4.exe
+T185C 007:884.514 - 12.563ms 
+T185C 007:884.518 JLINK_SetWarnOutHandler(...)
+T185C 007:884.521 - 0.002ms 
+T185C 007:884.524 JLINK_OpenEx(...)
+T185C 007:887.059   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T185C 007:888.283   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T185C 007:888.373   Decompressing FW timestamp took 77 us
+T185C 007:898.128   Hardware: V9.40
+T185C 007:898.139   S/N: 69408491
+T185C 007:898.143   OEM: SEGGER
+T185C 007:898.147   Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash
+T185C 007:899.257   Bootloader: (FW returned invalid version)
+T185C 007:900.508   TELNET listener socket opened on port 19021
+T185C 007:904.084   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T185C 007:904.143   WEBSRV Webserver running on local port 19080
+T185C 007:904.198   Looking for J-Link GUI Server exe at: C:\Keil_v5\ARM\Segger\JLinkGUIServer.exe
+T185C 007:904.222   Looking for J-Link GUI Server exe at: C:\Program Files\SEGGER\JLink_V890\JLinkGUIServer.exe
+T185C 007:904.246   Forking J-Link GUI Server: C:\Program Files\SEGGER\JLink_V890\JLinkGUIServer.exe
+T185C 007:905.172   J-Link GUI Server info: "J-Link GUI server V8.90 "
+T185C 007:905.321 - 20.796ms returns "O.K."
+T185C 007:905.333 JLINK_GetEmuCaps()
+T185C 007:905.337 - 0.003ms returns 0xB9FF7BBF
+T185C 007:905.343 JLINK_TIF_GetAvailable(...)
+T185C 007:905.648 - 0.304ms 
+T185C 007:905.657 JLINK_SetErrorOutHandler(...)
+T185C 007:905.660 - 0.003ms 
+T185C 007:905.667 JLINK_ExecCommand("ProjectFile = "C:\Users\Administrator\Desktop\AM32\Keil_Projects\JLinkSettings.ini"", ...). 
+T185C 007:907.305 - 1.638ms returns 0x00
+T185C 007:907.785 JLINK_ExecCommand("Device = -AT32F421K8U7", ...). 
+T185C 007:907.858   Flash bank @ 0x08000000: SFL: Parsing sectorization info from ELF file
+T185C 007:907.864     FlashDevice.SectorInfo[0]: .SectorSize = 0x00000400, .SectorStartAddr = 0x00000000
+T185C 007:907.869   OFL: Init() present @ offset 0x0000009F
+T185C 007:907.873   OFL: UnInit() present @ offset 0x000000D3
+T185C 007:907.877   OFL: EraseSector() present @ offset 0x00000191
+T185C 007:907.881   OFL: ProgramPage() present @ offset 0x000001ED
+T185C 007:907.885   OFL: EraseChip() present @ offset 0x000000EB
+T185C 007:907.889   OFL: BlankCheck() N/A
+T185C 007:907.893   OFL: Verify() N/A
+T185C 007:907.897   OFL: SEGGER_FL_Erase() N/A
+T185C 007:907.901   OFL: SEGGER_OPEN_Erase() N/A
+T185C 007:907.905   OFL: SEGGER_FL_Program() N/A
+T185C 007:907.909   OFL: SEGGER_OPEN_Program() N/A
+T185C 007:907.913   OFL: SEGGER_FL_Read() N/A
+T185C 007:907.917   OFL: SEGGER_OPEN_Read() N/A
+T185C 007:907.921   OFL: SEGGER_FL_CalcCRC() N/A
+T185C 007:907.925   OFL: SEGGER_OPEN_CalcCRC() N/A
+T185C 007:907.929   OFL: SEGGER_FL_Start() N/A
+T185C 007:907.933   OFL: SEGGER_OPEN_Start() N/A
+T185C 007:907.937   OFL: SEGGER_FL_GetFlashInfo() N/A
+T185C 007:907.941   OFL: SEGGER_OPEN_GetFlashInfo() N/A
+T185C 007:907.945   OFL: SEGGER_FL_Verify() N/A
+T185C 007:907.949   OFL: SEGGER_FL_CheckBlank() N/A
+T185C 007:907.953   OFL: SEGGER_FL_Prepare() N/A
+T185C 007:907.957   OFL: SEGGER_FL_Restore() N/A
+T185C 007:907.961   OFL: SEGGER_FL_EraseChip() N/A
+T185C 007:907.966   OFL var <SEGGER_FL_GoIntEn>: N/A
+T185C 007:907.969   OFL var <SEGGER_FL_Flags>: N/A
+T185C 007:907.989   Device "-AT32F421K8U7" selected.
+T185C 007:908.077 - 0.283ms returns 0x00
+T185C 007:908.081 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T185C 007:908.086   ERROR: Unknown command
+T185C 007:908.090 - 0.005ms returns 0x01
+T185C 007:908.094 JLINK_GetHardwareVersion()
+T185C 007:908.097 - 0.003ms returns 94000
+T185C 007:908.101 JLINK_GetDLLVersion()
+T185C 007:908.103 - 0.002ms returns 89000
+T185C 007:908.106 JLINK_GetOEMString(...)
+T185C 007:908.110 JLINK_GetFirmwareString(...)
+T185C 007:908.113 - 0.002ms 
+T185C 007:908.117 JLINK_GetDLLVersion()
+T185C 007:908.121 - 0.002ms returns 89000
+T185C 007:908.135 JLINK_GetCompileDateTime()
+T185C 007:908.138 - 0.003ms 
+T185C 007:908.143 JLINK_GetFirmwareString(...)
+T185C 007:908.145 - 0.002ms 
+T185C 007:908.149 JLINK_GetHardwareVersion()
+T185C 007:908.152 - 0.002ms returns 94000
+T185C 007:908.156 JLINK_GetSN()
+T185C 007:908.158 - 0.002ms returns 69408491
+T185C 007:908.162 JLINK_GetOEMString(...)
+T185C 007:908.167 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T185C 007:909.401 - 1.234ms returns 0x00
+T185C 007:909.413 JLINK_HasError()
+T185C 007:909.418 JLINK_SetSpeed(2000)
+T185C 007:909.650 - 0.232ms 
+T185C 007:909.825 JLINK_HasError()
+T185C 007:909.829 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T185C 007:909.833 - 0.003ms returns JLINKARM_RESET_TYPE_NORMAL
+T185C 007:909.837 JLINK_Reset()
+T185C 007:911.835   ConfigTargetSettings() start
+T185C 007:911.843    J-Link Script File: Executing ConfigTargetSettings()
+T185C 007:911.848   [ConfigTargetSettings]
+T185C 007:912.397   ConfigTargetSettings() end - Took 550us
+T185C 007:912.406   InitTarget() start
+T185C 007:912.410    J-Link Script File: Executing InitTarget()
+T185C 007:998.438   InitTarget() end - Took 86.0ms
+T185C 008:103.965   Failed to attach to CPU. Trying connect under reset.
+T185C 008:484.297   ConfigTargetSettings() start
+T185C 008:484.306    J-Link Script File: Executing ConfigTargetSettings()
+T185C 008:484.316   [ConfigTargetSettings]
+T185C 008:485.136   ConfigTargetSettings() end - Took 828us
+T185C 008:485.142   InitTarget() start
+T185C 008:485.146    J-Link Script File: Executing InitTarget()
+T185C 008:488.266   InitTarget() end - Took 3.11ms
+T185C 008:593.857 - 684.018ms 
+T185C 008:593.877 JLINK_GetId()
+T185C 008:594.408   ConfigTargetSettings() start
+T185C 008:594.413    J-Link Script File: Executing ConfigTargetSettings()
+T185C 008:594.423   [ConfigTargetSettings]
+T185C 008:595.114   ConfigTargetSettings() end - Took 699us
+T185C 008:595.118   InitTarget() start
+T185C 008:595.123    J-Link Script File: Executing InitTarget()
+T185C 008:598.024   InitTarget() end - Took 2.89ms
+T185C 008:766.726   ConfigTargetSettings() start
+T185C 008:766.741    J-Link Script File: Executing ConfigTargetSettings()
+T185C 008:766.748   [ConfigTargetSettings]
+T185C 008:767.498   ConfigTargetSettings() end - Took 757us
+T185C 008:767.508   InitTarget() start
+T185C 008:767.512    J-Link Script File: Executing InitTarget()
+T185C 008:770.578   InitTarget() end - Took 3.06ms
+T185C 008:876.917 - 283.035ms returns 0x00000000
+T185C 008:876.952 JLINK_GetId()
+T185C 008:877.439   ConfigTargetSettings() start
+T185C 008:877.447    J-Link Script File: Executing ConfigTargetSettings()
+T185C 008:877.453   [ConfigTargetSettings]
+T185C 008:878.182   ConfigTargetSettings() end - Took 733us
+T185C 008:878.187   InitTarget() start
+T185C 008:878.191    J-Link Script File: Executing InitTarget()
+T185C 008:881.096   InitTarget() end - Took 2.90ms
+T185C 009:049.540   ConfigTargetSettings() start
+T185C 009:049.550    J-Link Script File: Executing ConfigTargetSettings()
+T185C 009:049.556   [ConfigTargetSettings]
+T185C 009:050.381   ConfigTargetSettings() end - Took 829us
+T185C 009:050.387   InitTarget() start
+T185C 009:050.392    J-Link Script File: Executing InitTarget()
+T185C 009:053.422   InitTarget() end - Took 3.02ms
+T185C 009:160.110 - 283.156ms returns 0x00000000
+T185C 009:161.086 JLINK_GetFirmwareString(...)
+T185C 009:161.094 - 0.007ms 
+T185C 010:806.258 JLINK_Close()
+T185C 010:818.465 - 12.205ms
+T185C 010:818.477   
+T185C 010:818.480   Closed
